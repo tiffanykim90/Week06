@@ -11,7 +11,7 @@ public class Player {
 	
 		List<Card> hand = new ArrayList<Card>();//the array will be coming from the card class, so here I am calling out the Class Card 
 											//and naming the variable hand
-			Integer score = 0;
+			Integer score = 0;//instance field
 			String name;
 			private Object player1;
 			private Object player2;
@@ -33,23 +33,19 @@ public class Player {
 	    }
 
 		public Card dealCard() {
-			System.out.println("Player drawn a card: "+ hand.remove(0));
-	        if (hand.isEmpty());
+			//System.out.println("Player drawn a card: "+ hand.remove(0));
 	        return hand.remove(0);
 	        
 	    }
 
-		@SuppressWarnings("unchecked")
-		public Card flip(Object cards) {//B.2. flip (removes and returns the top card of the Hand)
-			if(Card.isempty()){
-				return null;
-			}
-			return null;
-		}
+		//@SuppressWarnings("unchecked")
+		//public Card flip(Object cards) {//B.2. flip (removes and returns the top card of the Hand)
+			//return hand.remove(0);
+		//}
 		public void handDraw(Deck deck) {//B.3. draw (takes a Deck as an argument and calls the draw method on the deck,
 			                             // adding the returned Card to the hand field)
 			Card drawnCard = deck.draw();//Calling out the draw method on the deck
-			this.hand.add(drawnCard);//this is supposed to return the card to the hand
+			hand.add(drawnCard);//this is supposed to return the card to the hand
 		}
 		public void Players() {//4.Initialize the score to 0
 			this.score = 0;
@@ -92,14 +88,13 @@ public class Player {
 		
 }
 		public void incrementScore() {//this method is for the App 
-			int cardScore = 1;
-			cardScore++;
-			System.out.println("New Score is:" + cardScore);
+			score++;
 		}
 		public String getValue() {//this method if for the App to get the score value
 			return getValue();
 		}
 		public Card flip() {//this is to call out the App flip method
+			
 			return dealCard();
 		}
 

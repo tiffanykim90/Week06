@@ -57,8 +57,7 @@ public class Deck {
 		Collections.shuffle(this.cards);	//this can be re-use every time we want a new deck 
 	}
 	public Card draw() {
-		Card card = this.cards.remove(0);
-			return card;
+			return cards.remove(0);
 		
 	}
 
